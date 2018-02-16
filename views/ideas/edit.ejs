@@ -1,0 +1,18 @@
+<% include ../partials/header.ejs %>
+
+  <div class="card card-body">
+    <h1>Edit the Video</h1>
+    <form action="/ideas/<%=idea._id%>?_method=PUT" method="post">
+      <div class="form-group">
+        <label for="idea[title]">Title</label>
+        <input type="text" name="idea[title]" class="form-control" value="<%=idea.title%>">
+      </div>
+      <div class="form-group">
+        <label for="idea[details]">Details</label>
+        <textarea name="idea[details]" class="form-control" ><%=idea.details%></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+  </div>
+
+<% include ../partials/footer.ejs %>

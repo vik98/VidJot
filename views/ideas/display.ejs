@@ -1,0 +1,16 @@
+<% include ../partials/header.ejs %>
+
+<% for (var i = 0; i < arr.length; i++) { %>
+      <div class="card card-body mb-2">
+        <h4>Title: <%=arr[i].title %></h4>
+        <p>Details: <%=arr[i].details %></p>
+        <form action="/ideas/<%=arr[i]._id%>/edit" method="GET">
+        <button type="submit" class="btn btn-dark btn-block mb-1">Edit</button>
+        </form>
+        <form action="/ideas/<%=arr[i]._id%>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-danger btn-block">Delete</button>
+        </form>
+      </div>
+<% } %>
+
+<% include ../partials/footer.ejs %>
