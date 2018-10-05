@@ -18,7 +18,7 @@ mongoose.connect(url);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.use(require("express-session")({
-  secret: "Fuck all hoes",
+  secret: "Random",
   resave: false,
   saveUninitialized: false
 }));
